@@ -12,3 +12,4 @@ Rock Paper Scissor : "https://repl.it/@HarishVadaparty/rock-paper-scissors-start
 Started with loops
 GOAL : Password Generator
 Average height Caluclator : "https://repl.it/@HarishVadaparty/day-5-1-exercise#main.py"
+Max score in a list : "https://repl.it/@HarishVadaparty/day-5-2-exercise#main.py"
