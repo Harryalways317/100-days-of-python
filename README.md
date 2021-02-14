@@ -24,4 +24,16 @@ Hurdles resource : "https://reeborg.ca/reeborg.html?lang=en&mode=python&menu=wor
 PEP Guide : "https://www.python.org/dev/peps/pep-0008/"
 Goal: HANGMAN PROJECT
 
+## Hangman 
+Hangman P{roject : https://repl.it/@HarishVadaparty/Day-7-Hangman-5-Start#main.py
+
+### Parameter vs Argument
+parameter is the name of the function input
+argument is the value of functional input
+
+### positional vs Keyword Args
+
+
+## Caesar Cipher
+
 
