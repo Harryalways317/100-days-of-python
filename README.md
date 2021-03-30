@@ -37,6 +37,14 @@ argument is the value of functional input
 ## Caesar Cipher : 
 Caesar Cipher : https://repl.it/@HarishVadaparty/caesar-cipher-4-start#main.py
 
+## Secret auction bidder:
+secret bidder : https://replit.com/@HarishVadaparty/blind-auction-start#main.py
+
+## Calculator
+Calculator : https://replit.com/@HarishVadaparty/calculator-final#main.py
+
+
+
 
 
 
