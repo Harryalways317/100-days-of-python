@@ -53,5 +53,6 @@ guess the number : https://replit.com/@HarishVadaparty/guess-the-number-final#ma
 ## HIGHER LOWER GAME
 game link : https://replit.com/@HarishVadaparty/higher-lower-start#main.py
 
-
+## Coffee Macine
+link : https://replit.com/@HarishVadaparty/coffee-machine-final#main.py
 
