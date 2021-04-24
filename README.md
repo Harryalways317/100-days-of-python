@@ -1,4 +1,4 @@
-#!00-Days-of-Python
+# 100-Days-of-Python
 Everyday i'll be updatiing this repo and i'll add a date check
 if i did anything amazing and satisfying ill be posting on instagram and twitter
 <hr>
