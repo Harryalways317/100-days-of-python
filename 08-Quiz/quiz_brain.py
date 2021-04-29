@@ -4,6 +4,8 @@ class QuizBrain:
         self.question_list = q_list
         self.user_score = 0
     
+    def current_score(self):
+        print(f'The current score is {self.user_score}/{self.question_number}')
 
     def still_has_questions(self):
         return  self.question_number < len(self.question_list)
@@ -17,6 +19,10 @@ class QuizBrain:
     def check_answer(self,user_answer,question):
         if user_answer == question.q_answer.lower() or user_answer == question.q_answer.lower()[0]:
             print(f'You got it right.')
+            self.user_score+=1
         else:
             print("You got it wrong")
+        print(f'The correct answer is: {question.q_answer}')
+        self.current_score()
+        print('\n')
         
