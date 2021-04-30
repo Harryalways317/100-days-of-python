@@ -4,6 +4,7 @@ tom_the_turtle = Turtle()
 tom_the_turtle.shape("turtle")
 tom_the_turtle.color("red")
 tom_the_turtle.pencolor("blue")
+tom_the_turtle.speed('fastest')
 colormode(255)
 def square():
     for i in range(0,4):
@@ -32,6 +33,13 @@ def random_walk():
         tom_the_turtle.color(random.randint(0,255),random.randint(0,255),random.randint(0,255))
         tom_the_turtle.forward(30)
         tom_the_turtle.setheading(random.choice(directions))
-random_walk()
+def randomcolor():
+    return (random.randint(0,255),random.randint(0,255),random.randint(0,255))
+def spirograph(gap):
+    for i in range(360//gap):
+        tom_the_turtle.color(randomcolor())
+        tom_the_turtle.circle(100)
+        tom_the_turtle.setheading(tom_the_turtle.heading()+gap)
+spirograph(20)
 screen = Screen()
 screen.exitonclick()
