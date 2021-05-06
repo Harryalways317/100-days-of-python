@@ -9,8 +9,9 @@ rt(-90)
 # the acute angle between
 # the base and branch of the Y
 angle = 30
+
 # function to plot a Y
-def y(sz, level,angle):
+def y(sz, level):
 
 	if level > 0:
 		colormode(255)
@@ -41,7 +42,7 @@ def y(sz, level,angle):
 		
 # tree of size 80 and level 7
 y(80, 7)
-
+angle1 = 120
 def z(sz, level):
 
 	if level > 0:
