@@ -26,7 +26,7 @@ game_is_on = True
 
 
 while game_is_on:
-    time.sleep(0.09)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
     
@@ -39,17 +39,21 @@ while game_is_on:
         ball.bounce_x()
 
     #collision with out of bounds Right
-    if ball.distance(rightPaddle) > 50 and ball.xcor() > 380:
+    if ball.xcor() > 380:
         leftScoreboard.increase_score()
-        ball.goto(0,0)
+        ball.reset_pos()
         ball.bounce_x()
+        
     #collision with out of bounds Left
-    if ball.distance(leftPaddle) > 50 and ball.xcor() < -380:
+    if  ball.xcor() < -380:
         rightScoreboard.increase_score()
-        ball.goto(0,0)
+        ball.reset_pos()
         ball.bounce_x()
+        
 
 
 
 
 screen.exitonclick()
+
+#TODO implement bat rotating , sound , bat edge static , responsive design
