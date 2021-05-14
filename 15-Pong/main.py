@@ -10,7 +10,6 @@ screen.title("Pong")
 screen.tracer(0)
 screen.listen()
 
-
 rightPaddle = Paddle("right")
 leftPaddle = Paddle("left")
 ball = Ball()
@@ -43,10 +42,12 @@ while game_is_on:
     if ball.distance(rightPaddle) > 50 and ball.xcor() > 380:
         leftScoreboard.increase_score()
         ball.goto(0,0)
+        ball.bounce_x()
     #collision with out of bounds Left
     if ball.distance(leftPaddle) > 50 and ball.xcor() < -380:
         rightScoreboard.increase_score()
         ball.goto(0,0)
+        ball.bounce_x()
 
 
 
