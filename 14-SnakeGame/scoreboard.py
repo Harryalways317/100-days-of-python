@@ -4,23 +4,34 @@ FONT = ("Arial", 24, 'normal')
 class ScoreBoard(Turtle):
     def __init__(self):
         self.score = 0
+        with open("data.txt") as file:
+            self.high_score = file.read()
         super().__init__()
         self.penup()
         self.goto(0,270)
         self.pendown()
         self.hideturtle()
         self.color("white")
-        self.write(f"Scoreboard: 0",move=False, align=ALIGNMENT, font=FONT)
+        #self.write(f"Scoreboard: 0",move=False, align=ALIGNMENT, font=FONT)
+        self.update_scoreboard()
         
-    def scoreboard(self):
-        self.write(f"Scoreboard: {self.score}",move=False, align= ALIGNMENT, font= FONT)
+    def update_scoreboard(self):
+        self.clear()
+        self.write(f"Scoreboard: {self.score},Highscore: {self.high_score}",move=False, align= ALIGNMENT, font= FONT)
 
-    def game_over(self):
-        self.goto(0,0)
-        self.write("Game Over",move=False,align=ALIGNMENT , font= FONT)
+    def reset(self):
+        if self.score > self.high_score:
+            self.high_score = self.score
+            with open("data.txt","w") as file:
+                file.write(self.high_score)
+        self.score = 0
+        self.update_scoreboard()
+
+    # def game_over(self):
+    #     self.goto(0,0)
+    #     self.write("Game Over",move=False,align=ALIGNMENT , font= FONT)
 
     def increase_score(self):
         self.score = self.score + 1
-        self.clear()
-        self.scoreboard()
+        self.update_scoreboard()
         
