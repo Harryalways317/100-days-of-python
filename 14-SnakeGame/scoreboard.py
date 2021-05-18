@@ -1,6 +1,6 @@
 from ast import Import
 from turtle import Turtle, position
-import highscore
+
 ALIGNMENT = "center"
 FONT = ("Arial", 24, 'normal')
 class ScoreBoard(Turtle):
