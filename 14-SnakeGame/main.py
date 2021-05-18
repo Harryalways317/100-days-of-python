@@ -1,4 +1,5 @@
-from turtle import Screen
+from tkinter.scrolledtext import ScrolledText
+from turtle import Screen, screensize
 from snake import Snake
 from food import Food
 from scoreboard import ScoreBoard
@@ -22,6 +23,9 @@ screen.onkey(snake.right, "Right")
 
 game_is_on = True
 while game_is_on:
+    screen_size = screensize()
+    print('####################')
+    print(screen_size)
     screen.update()
     time.sleep(0.1)
     snake.move()
