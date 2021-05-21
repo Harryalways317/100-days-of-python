@@ -8,13 +8,33 @@ turtle.shape(image)
 
 data = pandas.read_csv("50_states.csv")
 print(data)
-states = data['states'].to_list()
-x_coods = data['x'].to_list()
-y_coods = data['y'].to_list()
+all_states = data['state'].to_list()
+guessed_states = []
+while len(guessed_states) < 50:
+    answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Guessed",prompt="What's another state name").title()
+    if answer_state == "Exit":
+        remaining_states = []
+        remaining_states_dict = {}
+        for state_name in all_states:
+            if state_name not in guessed_states:
+                remaining_states.append(state_name)
+        remaining_states_dict = {"missed_states":remaining_states}
+        with open("answers.csv",'w') as answer_file:
+            df = pandas.DataFrame(remaining_states_dict)
+            answer_file.write(df.to_csv())
+        t = turtle.Turtle()
+        t.goto(0,0)
+        t.write("see the answers in csv")
+        turtle.exitonclick()
 
-found = 0
-while found!= len(data):
-    answer_state = screen.textinput(title="Guess The State",prompt="Ehat's another state name")
+    if answer_state in all_states:
+        t = turtle.Turtle()
+        t.penup()
+        t.hideturtle()
+        state_data = data[data.state == answer_state]
+        t.goto(int(state_data.x),int(state_data.y))
+        guessed_states.append(state_data.state.item())
+        t.write(state_data.state.item())
 
 # def get_mouse_click_coor(x, y):
 #     print(x, y)
