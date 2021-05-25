@@ -13,11 +13,7 @@ guessed_states = []
 while len(guessed_states) < 50:
     answer_state = screen.textinput(title=f"{len(guessed_states)}/50 States Guessed",prompt="What's another state name").title()
     if answer_state == "Exit":
-        remaining_states = []
-        remaining_states_dict = {}
-        for state_name in all_states:
-            if state_name not in guessed_states:
-                remaining_states.append(state_name)
+        remaining_states = [state for state in all_states if state not in guessed_states]
         remaining_states_dict = {"missed_states":remaining_states}
         with open("answers.csv",'w') as answer_file:
             df = pandas.DataFrame(remaining_states_dict)
